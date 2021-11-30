@@ -1,0 +1,27 @@
+from math import sqrt
+
+
+def polynome ():
+    a = int(input("Inserez la valeur de a : "))
+    if a == 0:
+        print ("a ne peut pas etre egal a 0")
+        polynome ()
+    b = int(input("Inserez la valeur de b : "))
+    c = int(input("Inserez la valeur de c : "))
+    de = b*b - 4 * a * c
+    if de < 0:
+        print("Il n'y a pas de solutions dans R")
+    if de == 0:
+        print("L'unique solution est x = " + str((-b) / (2 * a)))
+    if de > 0:
+        print ("Il existe deux solutions : x1 et x2")
+        print ("x1 = -b + √Δ / 2a = " + str(((-b) + sqrt(de)) // (2* a)))
+        print ("x2 = -b - √Δ / 2a = " + str(((-b) - sqrt(de)) // (2* a)))
+
+polynome ()
+
+
+
+# Δ < 0 pour 2 3 6
+# Δ > 0 pour 1 4 2
+# Δ = 0 pour 2 4 2
